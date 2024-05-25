@@ -1,8 +1,10 @@
 // src/App.js
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchTodosRequest, createTodoRequest, updateTodoRequest, deleteTodoRequest } from './/components/features/todo/todoSlice';
+import { fetchTodosRequest, createTodoRequest, updateTodoRequest, deleteTodoRequest } from './components/features/todo/todoSlice';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaEdit, FaTrash } from 'react-icons/fa';
+import { ImCheckboxUnchecked, ImCheckboxChecked } from 'react-icons/im';
 
 function App() {
   const dispatch = useDispatch();
@@ -69,16 +71,20 @@ function App() {
       </div>
       <ul className="list-group">
         {filteredItems.map((todo) => (
-          <li key={todo.id} className="list-group-item d-flex justify-content-between align-items-center">
+          <li
+            key={todo.id}
+            className="list-group-item d-flex justify-content-between align-items-center flex-column flex-sm-row border"
+            style={{ backgroundColor: todo.completed ? '#d4edda' : '#f8d7da' }}
+          >
             {editingTodo && editingTodo.id === todo.id ? (
-              <>
+              <div className="w-100">
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control mb-2 mb-sm-0"
                   value={editTodoTitle}
                   onChange={(e) => setEditTodoTitle(e.target.value)}
                 />
-                <div>
+                <div className="d-flex justify-content-end mt-2 mt-sm-0">
                   <button className="btn btn-sm btn-primary me-2" onClick={handleSaveEditTodo}>
                     Save
                   </button>
@@ -86,20 +92,22 @@ function App() {
                     Cancel
                   </button>
                 </div>
-              </>
+              </div>
             ) : (
-              <>
+              <div className="w-100 d-flex justify-content-between align-items-center flex-column flex-sm-row">
                 <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>{todo.title}</span>
-                <div>
+                <div className="d-flex justify-content-end mt-2 mt-sm-0">
                   <button className="btn btn-sm btn-warning me-2" onClick={() => handleUpdateTodo(todo)}>
-                    Edit
+                    <FaEdit />
                   </button>
                   <button className="btn btn-sm btn-success me-2" onClick={() => dispatch(updateTodoRequest({ ...todo, completed: !todo.completed }))}>
-                    {todo.completed ? 'Undo' : 'Complete'}
+                    {todo.completed ? <ImCheckboxChecked /> : <ImCheckboxUnchecked />}
                   </button>
-                  <button className="btn btn-sm btn-danger" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+                  <button className="btn btn-sm btn-danger" onClick={() => handleDeleteTodo(todo.id)}>
+                    <FaTrash />
+                  </button>
                 </div>
-              </>
+              </div>
             )}
           </li>
         ))}
