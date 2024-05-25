@@ -1,69 +1,115 @@
-### Todo List App
-### Getting Started
-### Prerequisites
- ### Before starting the project, you need to install the following dependencies:
+# Todo List App
+# This is a Todo List application built using React, Redux, Redux-Saga, Axios, and Bootstrap. The app interacts with a dummy API to manage a list of tasks.
 
-### bash
-### Copy code
-npm install @reduxjs/toolkit react-redux redux-saga axios bootstrap
-### Installation
-Clone the repository and navigate to the project directory:
+# Features
+Add, edit, and delete todos
+Mark todos as completed
+Search todos
+Responsive design using Bootstrap
+State management with Redux and Redux-Saga
+Data fetching with Axios
+# Getting Started
+# Prerequisites
+Make sure you have Node.js and npm installed on your machine.
 
-### bash
-### Copy code
-git clone <repository_url>
-### cd <project_directory>
-### Install the required dependencies:
+# Installation
+# Clone the repository:
 
-bash
+# bash
 Copy code
-### npm install
-### Available Scripts
-In the project directory, you can run the following scripts:
+git clone <repository_url>
+cd <project_directory>
+Install the dependencies:
 
-### npm start
-Runs the app in development mode. Open http://localhost:3000 to view it in your browser.
+# bash
+Copy code
+npm install
+Dependencies
+This project uses the following libraries:
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+@reduxjs/toolkit
+react-redux
+redux-saga
+axios
+bootstrap
+react-icons
+Install them using:
 
-### npm test
-Launches the test runner in interactive watch mode. See the section about running tests for more information.
+# bash
+Copy code
+npm install @reduxjs/toolkit react-redux redux-saga axios bootstrap react-icons
+Running the App
+To start the app in development mode, run:
 
-### npm run build
-Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+# bash
+Copy code
+npm start
+Open http://localhost:3000 to view it in your browser.
 
-The build is minified and the filenames include the hashes. Your app is ready to be deployed!
+# The page will reload if you make edits. You will also see any lint errors in the console.
 
-See the section about deployment for more information.
+# Running Tests
+To launch the test runner in interactive watch mode, run:
 
-npm run eject
-Note: This is a one-way operation. Once you eject, you can't go back!
+# bash
+Copy code
+npm test
+Building the App
+To build the app for production, run:
+
+# bash
+Copy code
+npm run build
+This will bundle React in production mode and optimize the build for the best performance. The build is minified, and the filenames include the hashes. The build folder is ready to be deployed.
+
+# Ejecting
+Note: this is a one-way operation. Once you eject, you can't go back!
 
 If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc.) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point, you're on your own.
+To eject, run:
 
-You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However, we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+bash
+Copy code
+npm run eject
+Usage
+# Add a Todo
+Type a new todo item in the input field.
+Click the "Add Todo" button.
+# Edit a Todo
+Click the edit icon (✏️) next to the todo item you want to edit.
+# Update the todo text in the input field.
+Click the "Save" button to save the changes.
+# Delete a Todo
+Click the delete icon (🗑️) next to the todo item you want to delete.
+# Mark a Todo as Completed
+# Click the checkbox icon (☐) next to the todo item to mark it as completed.
+# Click the checked icon (☑️) to unmark it as completed.
 
+# Search Todos
+Type a keyword in the search input field to filter the todo list.
 Learn More
 You can learn more in the Create React App documentation.
 
-To learn React, check out the React documentation.
+# To learn React, check out the React documentation.
 
-### Additional Resources
-# Code Splitting
-# Analyzing the Bundle Size
-# Making a Progressive Web App
-# Advanced Configuration
-# Deployment
-# Troubleshooting Build Issues
+# Additional Resources
+# Redux
+# Redux-Saga
+# Axios
+# Bootstrap
 # Contributing
-# Feel free to submit pull requests and issues. Any contributions you make are greatly appreciated.
+# Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
-# License
+# Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
+License
 Distributed under the MIT License. See LICENSE for more information.
 
 Contact
-Your Name - Rohit CHitampalle- chitampalle813@gmail.com
+Your Name - @rohitchitampalle - chitampalle813@gmail.com
 
-Project Link: https://github.com/rohitchitampalle
+Project Link: https://github.com/your_username/repo_name
