@@ -112,4 +112,3 @@ Distributed under the MIT License. See LICENSE for more information.
 Contact
 Your Name - @rohitchitampalle - chitampalle813@gmail.com
 
-Project Link: https://github.com/your_username/repo_name
